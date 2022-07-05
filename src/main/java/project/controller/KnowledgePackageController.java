@@ -1,0 +1,47 @@
+package project.controller;
+
+import java.util.List;
+import java.util.stream.Collectors;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import project.dto.KnowledgePackageRequestDto;
+import project.dto.KnowledgePackageResponseDto;
+import project.mapper.KnowledgePackageMapper;
+import project.service.KnowledgePackageService;
+
+@RestController
+@RequestMapping("/kpacs")
+public class KnowledgePackageController {
+    private final KnowledgePackageService knowledgePackageService;
+    private final KnowledgePackageMapper knowledgePackageMapper;
+
+    public KnowledgePackageController(KnowledgePackageService knowledgePackageService,
+            KnowledgePackageMapper knowledgePackageMapper) {
+        this.knowledgePackageService = knowledgePackageService;
+        this.knowledgePackageMapper = knowledgePackageMapper;
+    }
+
+    @GetMapping
+    public List<KnowledgePackageResponseDto> getAll() {
+        return knowledgePackageService.getAll().stream()
+                .map(knowledgePackageMapper::toDto)
+                .collect(Collectors.toList());
+    }
+
+    @PostMapping
+    public KnowledgePackageResponseDto create(
+            @RequestBody KnowledgePackageRequestDto knowledgePackageRequestDto) {
+        return knowledgePackageMapper.toDto(knowledgePackageService.create(
+                                knowledgePackageMapper.toModel(knowledgePackageRequestDto)));
+    }
+
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable Long id) {
+        knowledgePackageService.delete(id);
+    }
+}
