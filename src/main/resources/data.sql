@@ -40,3 +40,5 @@ INSERT INTO `k-pac`.`pac_sets` (knowledge_package_id, knowledge_package_set_id) 
 INSERT INTO `k-pac`.`pac_sets` (knowledge_package_id, knowledge_package_set_id) VALUES (9, 5);
 INSERT INTO `k-pac`.`pac_sets` (knowledge_package_id, knowledge_package_set_id) VALUES (1, 6);
 INSERT INTO `k-pac`.`pac_sets` (knowledge_package_id, knowledge_package_set_id) VALUES (8, 6);
+INSERT INTO `k-pac`.`pac_sets` (knowledge_package_id, knowledge_package_set_id) VALUES (1, 5);
+INSERT INTO `k-pac`.`pac_sets` (knowledge_package_id, knowledge_package_set_id) VALUES (8, 4);
