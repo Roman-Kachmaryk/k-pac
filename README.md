@@ -19,7 +19,7 @@ Get a list of all knowledge packages attached to a K-PAC Set (`GET: /set/{id}`).
 Technology Stack
 -------------
 - Java 11
-- Spring (Core, Web)
+- Spring (Core, Web, JdbcTemplate)
 - MySQL
 - Apache TomCat 9.0.50
 - Maven
