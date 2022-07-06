@@ -14,7 +14,7 @@ Get a list of all knowledge packages (`GET: /kpacs`), create a knowledge package
 
 Get a list of all knowledge package sets (`GET: /sets`), create a K-PAC Set (`POST: /sets`), delete a K-PAC Set (`DELETE: /sets/{id}`). 
 
-Get a list of knowledge packages attached to a K-PAC Set (`GET: /set/{id}`).
+Get a list of all knowledge packages attached to a K-PAC Set (`GET: /set/{id}`).
 
 Technology Stack
 -------------
