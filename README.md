@@ -28,7 +28,7 @@ Getting Started
 -------------
 In order to run this application, install MySQL and Apache TomCat 9.0.50 on your computer and follow the instructions listed below:
 1. Clone this project.
-2. Create a schema and respective tables and fill these tables with data by running the scripts placed in `schema.sql` and `data.sql` files in the `resources` directory.
+2. Create a schema and respective tables, and fill these tables with data by running the scripts placed in `schema.sql` and `data.sql` files in the `resources` directory.
 3. Create a connection to your database in the `resources` directory (`db.properties`) by using your credentials.
 4. Configure TomCat. Use `/` as your application context path.
 5. You can now run this application by using a TomCat local server.
